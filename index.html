@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cardápio digital do Food Truck Dog do AuAu. Hot dogs, lanches e contato pelo WhatsApp."
+    />
+    <title>Food Truck Dog do AuAu | Cardápio Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="hero" id="topo">
+      <nav class="topbar" aria-label="Navegação principal">
+        <a class="brand" href="#topo" aria-label="Food Truck Dog do AuAu">
+          <img
+            class="brand__logo"
+            src="assets/img/logo.png"
+            alt=""
+            aria-hidden="true"
+            onerror="this.style.display='none'"
+          />
+          <span class="brand__mark">Dog do</span>
+          <span class="brand__text">AuAu</span>
+        </a>
+        <div class="topbar__links">
+          <a class="topbar__phone" href="https://wa.me/5567998724017" target="_blank" rel="noopener">
+            (67) 99872-4017
+          </a>
+          <a
+            class="topbar__instagram"
+            href="https://www.instagram.com/dog_do_au_au/"
+            target="_blank"
+            rel="noopener"
+          >
+            @dog_do_au_au
+          </a>
+        </div>
+      </nav>
+
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="hero__tag">Cardápio digital</p>
+          <h1>Food Truck Dog do AuAu</h1>
+          <p class="hero__faith">Deus está no controle</p>
+          <p class="hero__subtitle">Venha nos fazer uma visita...estamos atendendo em frente à praça central 💕💕</p>
+
+          <div class="hero__actions" aria-label="Ações principais">
+            <button class="button button--primary" type="button" data-whatsapp-main>
+              Pedir pelo WhatsApp
+            </button>
+            <a
+              class="button button--secondary"
+              href="#cardapio"
+            >
+              Ver cardápio
+            </a>
+          </div>
+
+          <a class="hero__scroll-hint" href="#cardapio" aria-label="Ir para o cardápio">
+            <span>Confira o cardápio abaixo</span>
+            <strong aria-hidden="true">↓</strong>
+          </a>
+        </div>
+
+        <div class="hero-card" aria-hidden="true">
+          <img class="hero-card__mascot" src="assets/img/mascote.png" alt="" />
+          <div class="hero-card__ribbon">I <span>&hearts;</span> AuAu Lanches</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="notice" aria-label="Aviso">
+        <p>Escolha seu lanche e peça direto pelo WhatsApp.</p>
+      </section>
+
+      <section class="menu-shell" id="cardapio" aria-label="Cardápio">
+        <div class="section-heading">
+          <p>Cardápio</p>
+          <h2>Escolha sua categoria</h2>
+        </div>
+
+        <div class="category-nav" aria-label="Categorias do cardápio">
+          <button class="category-button is-active" type="button" data-category="todos">
+            Todos
+          </button>
+          <button class="category-button" type="button" data-category="hot-dogs">
+            Hot Dogs
+          </button>
+          <button class="category-button" type="button" data-category="lanches">
+            Lanches
+          </button>
+          <a class="category-button category-button--link" href="#informacoes">Informações</a>
+        </div>
+
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="info-section" id="informacoes" aria-label="Informações do food truck">
+        <div class="section-heading">
+          <p>Contato</p>
+          <h2>Informações</h2>
+        </div>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <span class="info-card__label">WhatsApp / Disk Entregas</span>
+            <strong>(67) 99872-4017</strong>
+            <button class="button button--dark" type="button" data-whatsapp-main>
+              Chamar no WhatsApp
+            </button>
+          </article>
+
+          <article class="info-card">
+            <span class="info-card__label">Endereço</span>
+            <strong>Endereço a confirmar</strong>
+            <p>Localização preparada para atualizar quando o cliente confirmar.</p>
+          </article>
+
+          <article class="info-card">
+            <span class="info-card__label">Instagram</span>
+            <strong>@dog_do_au_au</strong>
+            <p>Acompanhe novidades, fotos e bastidores dos lanches.</p>
+            <a
+              class="button button--dark"
+              href="https://www.instagram.com/dog_do_au_au/"
+              target="_blank"
+              rel="noopener"
+            >
+              Abrir Instagram
+            </a>
+          </article>
+        </div>
+
+        <article class="hours-card" aria-label="Horário de atendimento">
+          <div>
+            <span class="info-card__label">Horário de atendimento</span>
+            <h3>Funcionamento</h3>
+          </div>
+          <ul class="hours-list">
+            <li><span>Segunda a quinta</span><strong>18h às 01h</strong></li>
+            <li><span>Sexta</span><strong>18h às 03h</strong></li>
+            <li><span>Sábado</span><strong>18h às 05h</strong></li>
+            <li><span>Domingo</span><strong>18h às 23h</strong></li>
+          </ul>
+        </article>
+
+        <p class="closing-phrase">“Deus está no controle”</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Desenvolvido por Coded by CK</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
