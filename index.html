@@ -32,7 +32,8 @@
         </a>
         <div class="topbar__links">
           <a class="topbar__phone" href="https://wa.me/5567998724017" target="_blank" rel="noopener">
-            (67) 99872-4017
+            <span aria-hidden="true">💬</span>
+            <span>WhatsApp</span>
           </a>
           <a
             class="topbar__instagram"
@@ -40,7 +41,8 @@
             target="_blank"
             rel="noopener"
           >
-            @dog_do_au_au
+            <span aria-hidden="true">📸</span>
+            <span>Instagram</span>
           </a>
         </div>
       </nav>
@@ -88,7 +90,17 @@
           <h2>Escolha sua categoria</h2>
         </div>
 
-        <div class="category-nav" aria-label="Categorias do cardápio">
+        <button
+          class="filter-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="categoryFilter"
+        >
+          <span>Filtrar categorias</span>
+          <strong aria-hidden="true">+</strong>
+        </button>
+
+        <div class="category-nav" id="categoryFilter" aria-label="Categorias do cardápio">
           <button class="category-button is-active" type="button" data-category="todos">
             Todos
           </button>
@@ -122,7 +134,15 @@
           <article class="info-card">
             <span class="info-card__label">Endereço</span>
             <strong>Endereço a confirmar</strong>
-            <p>Localização preparada para atualizar quando o cliente confirmar.</p>
+            <div class="map-embed">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3691.217428815931!2d-53.82852172470725!3d-22.307615279681343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDE4JzI3LjQiUyA1M8KwNDknMzMuNCJX!5e0!3m2!1spt-BR!2sbr!4v1781621245456!5m2!1spt-BR!2sbr"
+                title="Localização do Food Truck Dog do AuAu"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </article>
 
           <article class="info-card">

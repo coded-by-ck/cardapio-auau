@@ -85,7 +85,9 @@ const products = [
 ];
 
 const productGrid = document.querySelector("#productGrid");
+const categoryNav = document.querySelector("#categoryFilter");
 const categoryButtons = document.querySelectorAll("[data-category]");
+const filterToggle = document.querySelector(".filter-toggle");
 const mainWhatsappButtons = document.querySelectorAll("[data-whatsapp-main]");
 
 function buildWhatsappUrl(message) {
@@ -151,9 +153,23 @@ categoryButtons.forEach((button) => {
     button.classList.add("is-active");
 
     renderProducts(category);
+    if (categoryNav && filterToggle && window.matchMedia("(max-width: 768px)").matches) {
+      categoryNav.classList.remove("is-open");
+      filterToggle.setAttribute("aria-expanded", "false");
+      filterToggle.querySelector("strong").textContent = "+";
+    }
     document.querySelector(".menu-shell").scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
+
+if (filterToggle && categoryNav) {
+  filterToggle.addEventListener("click", () => {
+    const isOpen = categoryNav.classList.toggle("is-open");
+
+    filterToggle.setAttribute("aria-expanded", String(isOpen));
+    filterToggle.querySelector("strong").textContent = isOpen ? "-" : "+";
+  });
+}
 
 mainWhatsappButtons.forEach((button) => {
   button.addEventListener("click", () => {
